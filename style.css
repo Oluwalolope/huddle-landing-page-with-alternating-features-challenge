@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap');
+
+:root {
+    /* font family */
+    --ff-head: 'Poppins',   sans-serif;
+    --ff-body: 'Open Sans', sans-serif;
+
+    /* font weight */
+    --fw-light:  400;
+    --fw-medium: 600;
+    --fw-bold:   700;
+
+    /* font size */
+    --fs-h1: 2rem;
+    --fs-h2: 1.5rem;
+    --fs-p:  1rem;
+
+    /* color */
+    --white: white;
+    --black: black;
+    --gray:  dimgray;
+
+    /* background color */
+    --bg-pink:         hsl(322, 100%, 66%);
+    --bg-pale-cyan:    hsl(193, 100%, 96%);
+    --bg-dark-cyan:    hsl(192, 100%, 9%);
+    --bg-grayish-blue: hsl(208, 11%, 55%);
+
+    /* border radius */
+    --br-small: 12px;
+    --br-medium: 18px;
+    --br-large: 50%;
+
+    /* spacing */
+    --spacing-small: 1rem;
+    --spacing-medium:     calc(var(--spacing-small) * 2);
+    --spacing-large:      calc(var(--spacing-small) * 3);
+    --spacing-very-large: calc(var(--spacing-small) * 4);
+
+    /* box shadow */
+    --bs-light: 0 2px 5px rgba(0, 0, 0, 0.2);
+    --bs-heavy: 0 2px 7px rgba(0, 0, 0, 0.2);
+}
+
+/* ===============================
+=========MOBILE VIEW===========
+=============================== */
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width:  100%;
+}
+.box-shadow {
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
+}
+.herobox {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ========Typography========= */
+a {
+    text-decoration: none;
+}
+h1 {
+    font-family: var(--ff-head);
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-medium);
+    text-align: center;
+    padding-top: var(--spacing-large);
+    padding-bottom: var(--spacing-small);
+}
+h2 {
+    font-family: var(--ff-head);
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-bold);
+    text-align: center;
+    padding-top: var(--spacing-small);
+    padding-bottom: var(--spacing-small);
+}
+p {
+    font-family: var(--ff-body);
+    font-size: var(--fs-p);
+    font-weight: var(--fw-light);
+    text-align: center;
+    
+}
+.nav-btn p {
+    font-size: calc(var(--fs-p) * 0.8);
+    font-weight: var(--fw-medium);
+}
+main p {
+    color: var(--gray);
+}
+footer p {
+    color: var(--white);
+}
+.contact--info p {
+    padding-left: var(--spacing-small);
+    text-align: left;
+}
+.footer--information div a {
+    font-family: var(--ff-body);
+    font-size: var(--fs-p);
+    font-weight: var(--fw-light);
+    color: var(--white);
+}
+.footer--information div a:hover {
+    text-decoration: underline;
+}
+
+/* ========header========= */
+header {
+    padding-left:  var(--spacing-small);
+    padding-right: var(--spacing-small);
+    background-image: url(images/bg-hero-mobile.svg);
+    background-color: var(--bg-pale-cyan);
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--spacing-small);
+    margin-bottom: var(--spacing-small);
+}
+nav img {
+    height: 1.875rem;
+}
+.nav-btn {
+    display: inline-block;
+    box-sizing: border-box;
+    box-shadow: var(--bs-heavy);
+    background-color: var(--white);
+    color: var(--black);
+    padding: calc(var(--spacing-small) * 0.6) calc(var(--spacing-small) * 2);
+    border-radius: var(--br-small);
+}
+.nav-btn:hover {
+    color: var(--gray);
+}
+.button {
+    display: block;
+    box-sizing: border-box;
+    box-shadow: var(--bs-heavy);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 15rem;
+    background-color: var(--bg-pink);
+    color: var(--white);
+    border-radius: var(--br-medium);
+    padding: .6rem;
+    margin-top: var(--spacing-medium);
+    margin-bottom: var(--spacing-medium);
+}
+.button:hover {
+    background-color: hsl(322, 100%, 66%, 0.6);
+}
+.illustration-mockups {
+    margin-bottom: var(--spacing-medium);
+}
+#illustration {
+    width: 100%;
+}
+
+/* ========main========= */
+main {
+    padding-left: var(--spacing-small);
+    padding-right: var(--spacing-small);
+    background-color: var(--white);
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: var(--bs-light);
+    border-radius: var(--br-small);
+    margin-top: var(--spacing-medium);
+    margin-bottom: var(--spacing-medium);
+    padding: var(--spacing-small);
+}
+.card div {
+    width: 100%;
+}
+
+/* =========section============= */
+section {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 0;
+    position: relative;
+    overflow: visible;
+    margin-top: calc(var(--spacing-very-large) * 2);
+}
+.pop-up {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    height: auto;
+    width: 80%;
+    box-shadow: var(--bs-light);
+    margin-top: calc(var(--spacing-very-large) * -1.5);
+    background-color: var(--white);
+    border-radius: var(--br-small);
+}
+
+/* =========footer=========== */
+footer {
+    background-color: var(--bg-dark-cyan);
+    padding-top: calc(var(--spacing-very-large) * 2);
+    padding-left:  var(--spacing-small);
+    padding-right: var(--spacing-small);
+    padding-bottom: var(--spacing-small);
+}
+.footer--flex{
+    display: flex;
+    flex-direction: column;
+    margin-top: var(--spacing-medium);
+}
+.contact--info {
+    margin-right: var(--spacing-medium);
+}
+.contact--info div {
+    display: flex;
+}
+ .contact--info div img {
+    box-sizing: border-box;
+    width: 18px;
+    height: 18px;
+    
+ }
+.contact--info div  {
+    margin-bottom: var(--spacing-small);
+} 
+.footer--information {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.footer--information div {
+    padding-bottom: var(--spacing-small);
+}
+.social--media {
+    width: 10em;
+    display: flex;
+    justify-content: space-between;
+    margin: var(--spacing-medium) auto;
+}
+.social--media a{
+    font-size: var(--secondary-heading-size);
+    color: var(--white);
+    text-align: center;
+    border: 1px solid white;
+    border-radius: var(--br-large);
+    padding: 8px;
+}
+.social--media a:hover {
+    border: 1px solid var(--bg-pink);
+    color: var(--bg-pink);
+}
+
+
+
+
+
+/* ==========================================
+===============DESKTOP VIEW===============
+========================================== */
+@media (width > 800px) {
+    .herobox {
+        flex-direction: row;
+    }
+    .herobox1 {
+        flex-direction: row;
+    }
+    .herobox2 {
+        flex-direction: row;
+    }
+    .button p {
+        text-align: center;
+    }
+
+    /* =========header============ */
+    header {
+        background-image: url(images/bg-hero-desktop.svg);
+        padding-left: var(--spacing-very-large);
+        padding-right: var(--spacing-very-large);
+    }
+    .herobox1 {
+        padding-right: var(--spacing-medium);
+    }
+    h1,
+    h2,
+    p {
+        text-align: left;
+    }
+    .button {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* ========main============ */
+    main {
+        padding-left: var(--spacing-very-large);
+        padding-right: var(--spacing-very-large);
+    }
+    .card {
+        padding-left: var(--spacing-large);
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .card--reverse {
+        flex-direction: row;
+    }
+    .card div {
+        width: 45%;
+        margin-top: auto;
+        margin-bottom: auto;
+        line-height: var(--fs-h1);
+    }
+
+    /* =========footer=============== */
+    footer {
+        padding-left: var(--spacing-very-large);
+        padding-right: var(--spacing-very-large);
+    }
+    .footer--flex {
+        flex-direction: row;
+    }
+    .contact--info {
+        flex: 2;
+    }
+    .footer--information {
+        flex: 2;
+        flex-direction: row;
+    }
+    .footer--information div {
+        text-align: start;
+        white-space: nowrap;
+        box-sizing: border-box;
+        width: 48%;
+    }
+    .social--media {
+        flex: 1;
+        align-items: flex-start;
+        margin-top: 0;
+    }
+    .copyright {
+        text-align: right;
+    }
+}
